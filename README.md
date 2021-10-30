@@ -5,8 +5,8 @@
 - Go to your destined branch.
 - Create a folder named as `WeekYY`.
 - Once you have finished coding, you can upload the files to your branch.
-- Create a Pull Request from your Repository to the `T4-weekly` repository's branch which has your own name. Make sure the branch names are correct. It should look something like this:
-- Every week from the `master` branch of your own repository click on `Fetch Upstream` to get the questions to your own repository. The `Fetch Upstream` option would look like this:
+- Create a Pull Request from your Repository to the `T4-weekly` repository's branch which has your own name. Make sure the branch names are correct.
+- Every week from the `master` branch of your own repository click on `Fetch Upstream` to get the questions to your own repository. 
 
 ### Folder structure:
 ```
