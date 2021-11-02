@@ -1,4 +1,4 @@
-//geeksforgeeks
+//geeksforgeek
 //Function to push an integer into the stack1.
 void twoStacks :: push1(int x)
 {
