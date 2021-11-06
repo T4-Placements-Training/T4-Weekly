@@ -1,0 +1,33 @@
+class Solution {
+public:
+    void sortarray(vector<int>& arr)
+    {
+        int n=arr.size();
+        for(int i=0;i<n-1;i++)
+        {
+            for(int j=i+1;j<arr.size();j++)
+            {
+                if(arr[i]<arr[j])
+                {
+                    int temp=arr[i];
+                    arr[i]=arr[j];
+                    arr[j]=temp;       
+                }
+            }
+        }
+    }
+    int removeElement(vector<int>& nums, int val) {
+        int n=nums.size(),cnt=0;
+        for(int i=0;i<n;i++)
+        {
+            if(val==nums[i])
+            {
+                cnt++;
+                nums[i]=-1;
+            }
+        }
+        sortarray(nums);
+        n-=cnt;
+        return n;
+    }
+};
