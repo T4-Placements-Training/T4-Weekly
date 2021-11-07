@@ -1,0 +1,38 @@
+class Solution {
+public:
+    bool checkcondition(char a,char b)
+    {
+        
+        if(a=='(' && b==')')
+            return true;
+        if(a=='[' && b==']')
+            return true;
+        if(a=='{' && b=='}')
+            return true;
+        return false;
+        
+    }
+    bool isValid(string s) {
+        stack<char> A;
+        
+        for(int i=0;i<s.length();i++)
+        {
+            if(A.empty())
+            {
+                A.push(s[i]);
+            }
+            else
+            {
+                if(checkcondition(A.top(),s[i]))
+                    A.pop();
+                else
+                    A.push(s[i]);
+            }
+                
+        }
+         if(!A.empty())
+             return false;
+        else
+            return true;
+    }
+};
