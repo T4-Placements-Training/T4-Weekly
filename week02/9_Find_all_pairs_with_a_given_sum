@@ -1,0 +1,19 @@
+class Solution{
+    public:
+    vector<pair<int,int>> allPairs(int A[], int B[], int N, int M, int X)
+    {
+        // Your code goes here   
+        vector<pair<int, int>> v; 
+        unordered_set<int> set; 
+        for (int i=0;i<N;i++) {
+            set.insert(A[i]);
+        }
+        for (int i=0;i<M;i++) {
+            if (set.find(X - B[i]) != set.end()) {
+                v.push_back(make_pair(X - B[i], B[i]));
+            }
+        }
+        sort(v.begin(), v.end());
+        return v;
+    }
+};
