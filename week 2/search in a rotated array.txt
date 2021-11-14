@@ -1,0 +1,14 @@
+class Solution{
+    public:
+    int search(int A[], int l, int h, int key)
+    {
+    //complete the function here
+        for(int i=l;i<h;i++)
+        {
+            if(key==A[i])
+                return i;
+        }
+    
+        return -1;
+    }
+};
