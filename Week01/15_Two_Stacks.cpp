@@ -2,7 +2,7 @@
 // https://practice.geeksforgeeks.org/problems/implement-two-stacks-in-an-array/1
 
 // TC: O(1)
-// SC: O(1)
+// SC: O(n)
 
 #include <bits/stdc++.h>
 using namespace std;
