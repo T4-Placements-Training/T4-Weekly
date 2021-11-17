@@ -11,7 +11,7 @@ struct check
     int freq;
     int val;
 };
-bool compare(pair<int,check*>&p1,pair<int,check*>&p2)
+ static bool compare(pair<int,check*>&p1,pair<int,check*>&p2)
 {
     if(p1.second->freq==p2.second->freq)
     {
