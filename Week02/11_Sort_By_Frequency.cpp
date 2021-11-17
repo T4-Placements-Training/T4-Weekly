@@ -30,6 +30,11 @@ vector<int> sortByFreq(int nums[], int n)
     vector<obj> arr;
     vector<int> res{};
 
+<<<<<<< HEAD
+    == == == =
+                 sort(nums, nums + n);
+
+>>>>>>> upstream/Premnaath
     int i = 0;
     while (i < n)
     {
