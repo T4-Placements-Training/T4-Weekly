@@ -9,6 +9,7 @@ using namespace std;
 
 #define ll long long
 #define deb(x) cout << #x << ": " << x << "\n"
+
 class obj
 {
 public:
@@ -28,8 +29,6 @@ vector<int> sortByFreq(int nums[], int n)
 {
     vector<obj> arr;
     vector<int> res{};
-
-    sort(nums, nums + n);
 
     int i = 0;
     while (i < n)
