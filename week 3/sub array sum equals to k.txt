@@ -1,0 +1,36 @@
+class Solution {
+public:
+    int sumi(vector<int>& nums,int i,int n)
+    {
+        int total=0;
+        int j=i+n;
+        for(int k=i;k<j;k++)
+        {
+            total+=nums[k];
+        }
+        return total;
+    }
+    int subarraySum(vector<int>& nums, int k) {
+        int sum=0,j=0,count=0,s=0;
+        map<int,int> presum;
+        
+        int n=nums.size();
+        
+        for(int i=0;i<n;i++)
+        {
+           sum+=nums[i];
+            
+            if(sum==k)
+                count++;
+        
+            int v=sum-k;
+            if(presum.find(v)!=presum.end() && !presum.empty())
+                 count+=presum[v];
+         
+           presum[sum]++;
+            
+        }
+        
+        return count;
+    }
+};
