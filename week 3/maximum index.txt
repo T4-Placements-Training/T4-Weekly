@@ -1,0 +1,18 @@
+int maxIndexDiff(int A[], int N) 
+    { 
+        // Your code here
+        int i=0,j=N-1,max_dif=0;
+        while(i<=j)
+        {
+            if(A[j]>=A[i])
+            {
+                int dif=j-i;
+                max_dif=max(max_dif,dif);
+                i++;
+                j=N-1;
+            }
+            else
+                j--;
+        }
+        return max_dif;
+    }
