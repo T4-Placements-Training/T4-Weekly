@@ -1,0 +1,11 @@
+bool searchPattern(string str, string pat)
+{
+    // your code here
+    int len=pat.length(),n=str.length();
+    for(int i=0;i<=n-len;i++)
+    {
+        if(str.substr(i,len)==pat)
+            return true;
+    }
+    return false;
+}

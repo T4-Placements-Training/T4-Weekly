@@ -1,0 +1,22 @@
+string encode(string src)
+{     
+  //Your code here 
+  string res="";
+  int i=1,c=1;
+  res+=src[0];
+  while(i<src.length())
+  {
+     if(src[i]==src[i-1])
+        c++;
+    else
+    {
+        res+=(c+'0');
+        res+=src[i];
+        c=1;
+    }
+    i++;
+        
+  }
+  res+=(c+'0');
+  return res;
+}     

@@ -1,0 +1,25 @@
+int minManipulation (int N, string S1, string S2)
+{
+    // your code here
+    int c=0;
+    map<char,int> A;
+    for(int i=0;i<S1.length();i++)
+        A[S1[i]]++;
+    for(int j=0;j<N;j++)
+    {
+        if(A.find(S2[j])!=A.end())
+        {
+            if(A.find(S2[j])->second>0)
+                A.find(S2[j])->second--;
+            else 
+                c++;
+        }
+        else
+        {
+            c++;
+        }
+    }
+    
+    
+    return c;
+}
