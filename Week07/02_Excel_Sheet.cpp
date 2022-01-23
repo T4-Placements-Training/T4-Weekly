@@ -1,0 +1,45 @@
+#ifdef ONPC
+#define _GLIBCXX_DEBUG
+#endif
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define deb(x) cout << #x << ": " << x << "\n"
+
+string colName(ll n)
+{
+	string res {};
+
+	while (n) {
+		/* Make n 0 indexed */
+		n--;
+
+		int r = n % 26;
+		res = string(1, 'A' + r) + res;
+		
+		n /= 26;
+	}
+
+	return res;
+}
+
+void solve()
+{
+	ll n { 705 };
+	cout << colName(n) << endl;
+}
+
+int main()
+{
+	ios_base::sync_with_stdio(0), cin.tie(0);
+#ifdef ONPC
+	freopen("input.txt", "r", stdin);
+#endif
+	int t { 1 };
+	/* int i{1}; cin >> t; */
+	while (t--) {
+		/* cout << "Case #" << i++ << ": "; */
+		solve();
+	}
+	return 0;
+}
